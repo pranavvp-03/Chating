@@ -12,7 +12,7 @@ const Sidebar = () => {
 
   useEffect(() => {
     getUsers();
-  }, [getUsers]);
+  }, []);
 
   const filteredUsers = showOnlineOnly
     ? users.filter((user) => onlineUsers.includes(user._id))
@@ -55,7 +55,7 @@ const Sidebar = () => {
           >
             <div className="relative mx-auto lg:mx-0">
               <img
-                src={user.profilePic || "\l60Hf.png"}
+                src={user.profilePic || "/avatar.png"}
                 alt={user.name}
                 className="size-12 object-cover rounded-full"
               />
@@ -84,4 +84,4 @@ const Sidebar = () => {
     </aside>
   );
 };
-export default Sidebar;
+export default Sidebar; 
