@@ -9,4 +9,3 @@ export const axiosInstance = axios.create({
 // export default axiosInstance
 
 
-console.log(axiosInstance,"dsdsdsds");
