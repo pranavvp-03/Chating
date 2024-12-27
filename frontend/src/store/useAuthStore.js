@@ -63,6 +63,10 @@ export const useAuthStore = create((set) => ({
         }
     },
 
+    updateProfile: async (data) =>{
+        
+    }
+
     
     // Additional methods for updating profile, logging out, etc. can be added here.
 }));
