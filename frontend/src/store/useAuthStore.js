@@ -32,7 +32,7 @@ export const useAuthStore = create((set,get) => ({
         set({ isSigningUp: true });
         try {
             const response = await axiosInstance.post('/auth/signup', data);
-            set({ authUser: "Logged" });
+            // set({ authUser: response.data });
             toast.success("Account created successfully")
             get().connectSocket()
            

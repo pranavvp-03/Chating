@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link as RouterLink } from 'react-router-dom';
+import { Link as RouterLink, useNavigate } from 'react-router-dom';
 import { useAuthStore } from '../store/useAuthStore'
 import { EyeOff, Link, Loader2, Mail, MessageSquare } from 'lucide-react'
 import { User, Lock, Eye } from 'lucide-react'
@@ -8,6 +8,7 @@ import toast from 'react-hot-toast';
 
 
 const SignUpPage = () => {
+  const navigate=useNavigate()
   const [showPasword,setShowPassword] = useState(false)
   const [formData,setFormData] =  useState({
     fullName: "",
@@ -29,6 +30,7 @@ const SignUpPage = () => {
 
     const success = validateForm()
     if(success=== true) signUp(formData)
+      navigate('/login')
   }
   return (
     <div className='min-h-screen grid lg:grid-cols-2'>
